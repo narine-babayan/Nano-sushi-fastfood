@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Babayan Style</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif}
+    body{background:#0a0a0a;color:#fff}
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#000}
+    nav a{color:#fff;margin:0 15px;text-decoration:none}
+    .hero{height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd47') center/cover}
+    .hero h1{font-size:48px;margin-bottom:10px}
+    .hero button{padding:12px 25px;border:none;background:orange;color:#000;cursor:pointer}
+    .products{padding:50px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .card{background:#111;padding:15px;border-radius:10px;text-align:center}
+    .card img{width:100%;border-radius:10px}
+    .card button{margin-top:10px;padding:10px;background:orange;border:none;cursor:pointer}
+    footer{text-align:center;padding:20px;background:#000;margin-top:50px}
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Babayan Style</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Elegance in Every Detail</h1>
+  <p>Discover our exclusive collection</p>
+  <button onclick="scrollToProducts()">Shop Now</button>
+</section>
+
+<section class="products" id="products">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03">
+    <h3>Silk Corset White</h3>
+    <p>$29</p>
+    <button onclick="addToCart('White Corset')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+    <h3>Silk Corset Black</h3>
+    <p>$25</p>
+    <button onclick="addToCart('Black Corset')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1495121605193-b116b5b09a3b">
+    <h3>Silk Dress</h3>
+    <p>$49</p>
+    <button onclick="addToCart('Dress')">Add to Cart</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Babayan Style</p>
+</footer>
+
+<script>
+function scrollToProducts(){
+  document.getElementById('products').scrollIntoView({behavior:'smooth'});
+}
+
+function addToCart(product){
+  alert(product + ' added to cart');
+}
+</script>
+
+</body>
+</html>
 
